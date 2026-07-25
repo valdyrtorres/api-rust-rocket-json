@@ -1,0 +1,1 @@
+curl -X PUT -H "Content-Type: application/json" -d '{"titulo": "Novo Recurso", "descricao": "Descrição do novo recurso"}' http://127.0.0.1:9000/recursos/1
