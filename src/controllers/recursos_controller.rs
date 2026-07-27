@@ -42,7 +42,7 @@ pub fn mostrar(id: u32) -> status::Custom<Json<Recurso>> {
 pub fn excluir(id: u32) -> Result<status::Custom<Json<()>>, status::Custom<Json<ErroJson>>> {
 
     match recurso_servico::apagar_recurso_por_id(id) {
-        Ok(recurso) => Ok(status::Custom(Status::NoContent, Json(()))),
+        Ok(_recurso) => Ok(status::Custom(Status::NoContent, Json(()))),
         Err(str_erro) => Err(status::Custom(Status::BadRequest, Json(ErroJson { mensagem: str_erro }))),
     } 
 }
